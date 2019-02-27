@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "c7477bca-b7bb-4555-a8e2-27fa714cab26",
+		"name": "TreeCountService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "treecount-service-success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "22ad658c-41a8-46f9-b53c-f0dc913d8d10",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"red maple\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/treecount-service/latitude/40/longitude/-70/radius/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"treecount-service",
+						"latitude",
+						"40",
+						"longitude",
+						"-70",
+						"radius",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "treecount-service-noTreeFound",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cfa522a6-7a4f-482c-bdf8-337a12a2b87f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"red maple\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/treecount-service/latitude/40/longitude/-20/radius/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"treecount-service",
+						"latitude",
+						"40",
+						"longitude",
+						"-20",
+						"radius",
+						"20"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
