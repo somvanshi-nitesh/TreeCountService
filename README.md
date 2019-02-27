@@ -1,16 +1,14 @@
-Assignment
+#This service is used to retrieve the count of "common name" for all the species of trees in given search radius
 
-Create a search application where you expose an endpoint for a client to search based on a certain radius for tree related data.
+##Endpoint of the service
+http://${server}:8080/treecount-service/latitude/{latitude}/longitude/{longitude}/radius/{radius}
 
-- You can find Street tree data from the TreesCount 2015 here => https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh
-- The direct call to api is `https://data.cityofnewyork.us/resource/nwxe-4ae8.json`
-- You have to expose and API endpoint accepting two parameters 
-    1. A Cartesian Point specifying a center point along the x & y plane
-    2. A search radius in meters
+whereas latitude, longitude and radius are the path parameters and have to be provided by the user
+
+Input
+ - Street tree data has been feteched by direct API call to https://data.cityofnewyork.us/resource/nwxe-4ae8.json`
 
 Output
- - You have to retrieve the count of "common name" (please see in the documentation on the same page above which field to refer to) for all 
- the species of trees in that search radius
  - Expected outcome from the api
 ```json
 {
