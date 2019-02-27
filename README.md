@@ -1,6 +1,6 @@
-#This service is used to retrieve the count of "common name" for all the species of trees in given search radius
+# This service is used to retrieve the count of "common name" for all the species of trees in given search radius
 
-##Endpoint of the service
+## Endpoint of the service
 http://${server}:8080/treecount-service/latitude/{latitude}/longitude/{longitude}/radius/{radius}
 
 whereas latitude, longitude and radius are the path parameters and have to be provided by the user
