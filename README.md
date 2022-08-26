@@ -21,3 +21,5 @@ Output
 Testing
  - Junit Testcases can be executed using Junit5 Test runner 
  - Postman collection with two tests (Status code, and response body check) has been added to the "src/test/resources" folder
+ 
+ For Maryum ;) - `http://${server}:8080/departmentInfo/{departmentId}` wheresas departmentId can be 1 to 6 as it's hardcoded. Ex: http://${server}:8080/departmentInfo/2
